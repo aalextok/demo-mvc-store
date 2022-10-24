@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell:italic|Droid+Serif:bold');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #b6bdff;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    color: rgb(2, 11, 61);
+    font-weight: 500;
+}
+
+.site-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 20px;
+    padding: 20px;
+    align-items: center;
+    border-bottom: 1.5px solid rgb(0, 0, 0);
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+}
+
+.btn {
+    font-family: 'Calibri';
+    font-weight: 700;
+    color:rgb(0, 14, 139);
+    margin: 0 0.5rem;
+    padding: 0.5em 1em;
+    font-weight: medium;
+    border-radius: 10px;
+    border: 0.05em solid;
+    text-shadow: none;
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--clr-white);
+    font-size: 1rem;
+}
+
+#save-product-btn, #cancel-product-btn {
+    background: rgb(160, 149, 255);
+    color: black;
+}
+
+#save-product-btn:hover{
+    background-color: rgb(7, 148, 19);
+    color: rgb(255, 255, 255);
+}
+
+#cancel-product-btn:hover{
+    background-color: rgb(196, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+#save-product-btn:active{
+    background-color: rgb(87, 231, 43, 0.87);
+    box-shadow: 0 5px 15px rgb(76, 184, 43, 0.87);
+}
+
+#cancel-product-btn:active{
+    background-color: rgb(255, 57, 57, 0.87);
+    box-shadow: 0 5px 15px rgb(255, 46, 46, 0.87);
+}
+
+#cancel-product-btn .save-product-btn {
+    transition-delay: 0.1s;
+    border: 0px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 40px;
+    font-weight: 700;
+}
+
+.container .product_form .product_add {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.container .product_form .product_add div{
+    width: 200px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.container .product_form .hidden {
+    display: none;
+}
+
+.copyright {
+    border-top: 1px solid #000000;
+    margin:250px 20px;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 600;
+}
