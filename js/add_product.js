@@ -1,6 +1,9 @@
 const select = document.querySelector('#productType');
 
 function choiseProductType(sw) {
+  const productType = types[sw.value];
+  console.log({productType})
+
   let dvd = document.getElementById('DVD');
   let furniture = document.getElementById('Furniture');
   let book = document.getElementById('Book');

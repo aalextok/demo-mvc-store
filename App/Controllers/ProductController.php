@@ -22,11 +22,15 @@ class ProductController extends BaseController
         // Retrieve types and related options:
         $types = Type::findAll();
 
-        // Render form with dynamically changing options:
+        // echo "<pre>";
+        // var_dump($types);
+        // echo "</pre>";
+        // die;
 
+        // Render form with dynamically changing options:
         self::render('product-edit', [
             'title' => 'Product Add',
-            'types' => json_encode($types),
+            'types' => $types,
             'js_file' => 'add_product',
             'css_file' => 'style_add',
         ]);
@@ -35,6 +39,9 @@ class ProductController extends BaseController
     public function actionSaveProduct($request)
     {
         $data = $request->getBody();
+
+        var_dump($data); die;
+
         $product = Product::getProduct($data);
         if ($product) {
 

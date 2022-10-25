@@ -1,8 +1,7 @@
 <script type="text/javascript">
   // Data for product types and corresponding options is exported to JavasScript as JSON object.
   // It is possible now to use constant `types` to render dynamic form in HTML/CSS/JS
-    const types = <?=$types?>;
-    console.log(types);
+  const types = <?=json_encode($types)?>
 </script>
 <header>
     <div class ="site-heading">
@@ -23,7 +22,7 @@
             </div>
             <div class="product_add">
                 <div>SKU</div>
-                <input type="text" id="sku" name="SKU" value=""/>
+                <input type="text" id="sku" name="sku" value=""/>
             </div>
             <div class="product_add">
                 <div>Price ($)</div>
@@ -34,12 +33,18 @@
                 <div class="select-type-switcher">
                     <select id="productType" name="type_switcher" onchange="choiseProductType(this)">
                         <option selected disabled value="type_switcher">Type Switcher</option>
-                        <option value="dvd">DVD</option>
-                        <option value="furniture">Furniture</option>
-                        <option value="book">Book</option>
+                        <?php
+                            foreach($types as $typeId => $type) {
+                                echo "<option value=\"$typeId\">".$type->name."</option>";
+                            }
+                            // <option value="dvd">DVD</option>
+                            // <option value="furniture">Furniture</option>
+                            // <option value="book">Book</option>
+                        ?>
                     </select>
                 </div>
             </div>
+            <!-- TODO: render using types data -->
             <div id="DVD" class="hidden">
                 <div class="product_add">
                     <div>Size (MB)</div>
